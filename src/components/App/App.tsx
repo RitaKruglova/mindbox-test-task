@@ -1,13 +1,14 @@
 import React, { FC } from 'react';
 import appStyles from './App.module.css';
-import Header from './components/Header/Header';
-import Input from './components/Input/Input';
+import Header from '../Header/Header';
+import Input from '../Input/Input';
 import { Route, Routes } from 'react-router-dom';
-import ToDoList from './components/ToDoList/ToDoList';
+import ToDoList from '../ToDoList/ToDoList';
+import Footer from '../Footer/Footer';
 
 const App: FC = () => {
   return (
-    <div className={appStyles.page}>
+    <div className={appStyles.container}>
       <Header />
       <main className={appStyles.main}>
         <Input />
@@ -17,7 +18,7 @@ const App: FC = () => {
           <Route path="/complited" element={<ToDoList />} />
         </Routes>
       </main>
-      
+      <Footer itemsLeft={2} />
     </div>
   )
 }
