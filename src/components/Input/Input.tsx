@@ -6,6 +6,7 @@ const Input: FC = () => {
     <div className={inputStyles.container}>
       <button className={inputStyles.button} />
       <input
+        className={inputStyles.input}
         type="text"
         placeholder="What needs to be done?"
         minLength={2}
