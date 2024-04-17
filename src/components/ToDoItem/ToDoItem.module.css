@@ -1,0 +1,62 @@
+.container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  padding: 0 10px;
+  column-gap: 10px;
+  box-sizing: border-box;
+  height: 60px;
+}
+
+.checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  -webkit-clip-path: inset(0 0 0 0);
+  clip-path: inset(0 0 0 0);
+  top: 7px;
+  right: 7px;
+}
+
+.visibleCheckbox {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid rgb(117 117 126);
+  align-self: center;
+  justify-self: center;
+  position: relative;
+}
+
+.visibleCheckbox {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid rgb(117, 117, 126);
+  align-self: center;
+  justify-self: center;
+  overflow: hidden;
+}
+
+.checkMark {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  color: rgb(119 192 175);
+  font-size: 23px;
+  line-height: 40px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.checkbox:checked + .visibleCheckbox > .checkMark {
+  display: block;
+}
+
+.text {
+  font-size: 30px;
+  font-weight: 400;
+}
