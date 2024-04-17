@@ -1,0 +1,36 @@
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 10px;
+}
+
+.button {
+  width: 80px;
+  height: 40px;
+  padding: 0;
+  margin-right: 10px;
+  background-color: white;
+  border: 1px solid rgb(230 230 230);
+  border-radius: 7px;
+  color: rgb(230 230 230);
+  font-size: 28px;
+}
+
+.input {
+  height: 40px;
+  width: calc(100% - 80px - 20px);
+  border: none;
+  color: rgb(117 117 126);
+  font-size: 30px;
+  line-height: 40px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  padding: 0;
+  caret-color: rgb(117 117 126);
+}
+
+.input:focus {
+  outline: none;
+}

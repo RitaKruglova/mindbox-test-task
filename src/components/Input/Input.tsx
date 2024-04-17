@@ -4,7 +4,7 @@ import inputStyles from './Input.module.css';
 const Input: FC = () => {
   return (
     <div className={inputStyles.container}>
-      <button className={inputStyles.button} />
+      <button className={inputStyles.button} type="submit">Add</button>
       <input
         className={inputStyles.input}
         type="text"

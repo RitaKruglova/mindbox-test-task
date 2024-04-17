@@ -1,0 +1,15 @@
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+}
+
+.title {
+  font-size: 70px;
+  letter-spacing: 15px;
+  font-weight: 400;
+  color: rgb(233 217 216);
+  margin: 0;
+}
