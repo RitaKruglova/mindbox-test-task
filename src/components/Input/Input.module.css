@@ -18,6 +18,10 @@
   font-size: 28px;
 }
 
+.button:hover {
+  cursor: pointer;
+}
+
 .input {
   height: 40px;
   width: calc(100% - 80px - 20px);

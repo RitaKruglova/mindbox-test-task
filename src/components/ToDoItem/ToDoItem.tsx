@@ -15,7 +15,7 @@ const ToDoItem: FC<IToDoItemProps> = ({ text, id }) => {
         id={`${id}`}
       />
       <label htmlFor={`${id}`} className={toDoItemStyles.visibleCheckbox}>
-        <span className={toDoItemStyles.checkMark}>✓</span>
+        <span className={toDoItemStyles.checkMark} />
       </label>
       <h2 className={toDoItemStyles.text}>{text}</h2>
     </li>

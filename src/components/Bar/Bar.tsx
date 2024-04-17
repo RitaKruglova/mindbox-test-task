@@ -8,11 +8,11 @@ interface IBarProps {
 
 const Bar: FC<IBarProps> = ({ itemsLeft }) => {
   return (
-    <footer className={barStyles.container}>
+    <div className={barStyles.container}>
       <p className={barStyles.count}>{`${itemsLeft} items left`}</p>
       <Navigation />
       <button className={barStyles.button}>Clear Complited</button>
-    </footer>
+    </div>
   )
 }
 
