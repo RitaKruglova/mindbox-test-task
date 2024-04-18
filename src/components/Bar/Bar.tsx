@@ -4,14 +4,21 @@ import Navigation from '../Navigation/Navigation';
 
 interface IBarProps {
   itemsLeft: number;
+  handleClearComplited(): void;
 }
 
-const Bar: FC<IBarProps> = ({ itemsLeft }) => {
+const Bar: FC<IBarProps> = ({ itemsLeft, handleClearComplited }) => {
   return (
     <div className={barStyles.container}>
       <p className={barStyles.count}>{`${itemsLeft} items left`}</p>
       <Navigation />
-      <button className={barStyles.button}>Clear Complited</button>
+      <button
+        className={barStyles.button}
+        type="button"
+        onClick={handleClearComplited}
+      >
+        Clear Complited
+      </button>
     </div>
   )
 }

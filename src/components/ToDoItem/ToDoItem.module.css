@@ -50,3 +50,8 @@
   font-weight: 400;
   margin: 0;
 }
+
+.complited {
+  text-decoration: line-through;
+  color: rgb(117 117 126);
+}

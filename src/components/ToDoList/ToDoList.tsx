@@ -1,13 +1,25 @@
 import { FC } from 'react';
 import toDoListStyles from './ToDoList.module.css';
 import ToDoItem from '../ToDoItem/ToDoItem';
+import { TToDo } from '../../utils/types';
 
-const ToDoList: FC = () => {
+interface IToDoListProps {
+  todos: TToDo[];
+  handleChange(todoIndex: number): void;
+}
+
+const ToDoList: FC<IToDoListProps> = ({ todos, handleChange }) => {
   return (
     <ul className={toDoListStyles.container}>
-      <ToDoItem text="Тестовое задание" id={1} />
-      <ToDoItem text="Прекрасный код" id={2} />
-      <ToDoItem text="Покрытие тестами" id={3} />
+      {todos.map((todo, todoIndex) => (
+        <ToDoItem
+          key={todo.id}
+          text={todo.text}
+          id={todo.id}
+          isChecked={todo.isChecked}
+          handleChange={() => handleChange(todoIndex)}
+        />
+      ))}
     </ul>
   )
 }
