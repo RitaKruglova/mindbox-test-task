@@ -45,7 +45,7 @@ const App: FC = () => {
     return getNotComplitedTodos().length;
   }
 
-  function handleClearComplited(): void {
+  function handleClearCompleted(): void {
     setTodos(getNotComplitedTodos());
   }
 
@@ -53,7 +53,7 @@ const App: FC = () => {
     <div className={appStyles.container}>
       <Header />
       <main className={appStyles.main}>
-        <form className={appStyles.form} onSubmit={handleSubmit}>
+        <form className={appStyles.form} onSubmit={handleSubmit} data-testid="todo-form">
           <Input value={inputValue} handleChange={handleChange} />
         </form>
         <Routes>
@@ -85,7 +85,7 @@ const App: FC = () => {
             }
           />
         </Routes>
-        <Bar itemsLeft={getItemsLeft()} handleClearComplited={handleClearComplited} />
+        <Bar itemsLeft={getItemsLeft()} handleClearCompleted={handleClearCompleted} />
       </main>
     </div>
   )
